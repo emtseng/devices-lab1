@@ -1,6 +1,6 @@
 # Simple-ChatBot
 
-This is a simple example on how websockets can be used to create a simple ChatBot using node.js(R). 
+This is a simple example on how websockets can be used to create a simple ChatBot using node.js(R).
 
 
 ---
