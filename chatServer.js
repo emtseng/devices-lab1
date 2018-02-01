@@ -1,7 +1,7 @@
 /*
 chatServer.js
 Author: David Goedicke (da.goedicke@gmail.com)
-Closley based on work from Nikolas Martelaro (nmartelaro@gmail.com) as well as Captain Anonymous (https://codepen.io/anon/pen/PEVYXz) who forked of an original work by Ian Tairea (https://codepen.io/mrtairea/pen/yJapwv)
+Closely based on work from Nikolas Martelaro (nmartelaro@gmail.com) as well as Captain Anonymous (https://codepen.io/anon/pen/PEVYXz) who forked of an original work by Ian Tairea (https://codepen.io/mrtairea/pen/yJapwv)
 */
 
 var express = require('express'); // web server application
@@ -42,6 +42,7 @@ io.on('connect', function(socket) {
     console.log('user disconnected');
   });
 });
+
 //--------------------------CHAT BOT FUNCTION-------------------------------//
 function bot(data,socket,questionNum) {
   var input = data; // This is generally really terrible from a security point of view ToDo avoid code injection
@@ -77,12 +78,12 @@ function bot(data,socket,questionNum) {
       waitTime =2000;
       question = 'Whats your favorite place?';
     }
-    else if(input.toLowerCase()==='no'|| input===0){
-        socket.emit('changeFont','white'); /// we really should look up the inverse of what we said befor.
+    else if(input.toLowerCase().contains('no') || input===0){
+        socket.emit('changeFont','white'); /// we really should look up the inverse of what we said before.
         answer='How about now?'
         question='';
-        waitTime =0;
-        questionNum--; // Here we go back in the question number this can end up in a loop
+        waitTime = 0;
+        questionNum--; // Here we go back in the question number. This can end up in a loop.
     }else{
       answer=' I did not understand you. Can you please answer with simply with yes or no.'
       question='';
@@ -92,8 +93,8 @@ function bot(data,socket,questionNum) {
   // load next question
   }
   else{
-    answer= 'I have nothing more to say!';// output response
-    waitTime =0;
+    answer = 'I have nothing more to say!';// output response
+    waitTime = 0;
     question = '';
   }
 
