@@ -75,10 +75,10 @@ function bot(data, socket, questionNum) {
     case 4:
       answer = `${input} sounds so idyllic. I grew up on a factory floor.`
       waitTime = 5000
-      question = ''
+      question = 'Last question. Did you mean to give me your answers to some of the most common security questions used in online banking? ;)'
       break
     default:
-      answer = 'I have nothing to say!';// output response
+      answer = 'Well then, I have nothing to say!';// output response
       waitTime = 0;
       question = '';
       break
