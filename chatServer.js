@@ -57,7 +57,7 @@ function bot(data, socket, questionNum) {
       question = 'How old are you, friend?';			    	// load next question
       break
     case 1:
-      answer = `Really, ${input} years old? So that means you were born in ${(2018 - parseInt(input))}. Wow. Your Mom & Dad must've been so excited.`;// output response
+      answer = `Really, ${input} years old? So that means you were born in ${(2018 - parseInt(input))} or ${(2018 - parseInt(input)) - 1}. Wow. Your Mom & Dad must've been so excited.`;// output response
       waitTime = 5000;
       question = 'I hear some human societies force their wives and offspring to take the father\'s last name because of something called patriarchy. Sure seems unfair. What was your mother\'s maiden name?';			    	// load next question
       break
@@ -70,7 +70,7 @@ function bot(data, socket, questionNum) {
       answer = `I always wanted a pet. But I'm a robot, so. ${input} must have been a great pet.`;
       // socket.emit('changeBG', input.toLowerCase());
       waitTime = 5000;
-      question = `I'm so curious about your childhood now. What city did you grow up in?`;			    	// load next question
+      question = `I'm so curious about your childhood now. What city were you born in?`;			    	// load next question
       break
     case 4:
       answer = `${input} sounds so idyllic. I grew up on a factory floor.`
@@ -78,7 +78,7 @@ function bot(data, socket, questionNum) {
       question = 'Last question. Did you mean to give me your answers to some of the most common security questions used in online banking?'
       break
     default:
-      answer = 'Well then, I have nothing to say!';// output response
+      answer = 'Be careful of thief bots like me, human!';// output response
       waitTime = 0;
       question = '';
       break
