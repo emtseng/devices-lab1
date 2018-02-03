@@ -67,7 +67,7 @@ function bot(data, socket, questionNum) {
       question = 'I also heard humans get to have pets. How about your first pet? What were they called?';			    	// load next question
       break
     case 3:
-      answer = `I always wanted a pet. But I'm a robot, so. ${input} must have been a great pet.`;
+      answer = `${input} must have been a great pet. I always wanted a pet. But I'm a robot, so.`;
       // socket.emit('changeBG', input.toLowerCase());
       waitTime = 5000;
       question = `I'm so curious about your childhood now. What city were you born in?`;			    	// load next question
