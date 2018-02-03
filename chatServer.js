@@ -52,7 +52,7 @@ function bot(data, socket, questionNum) {
 
   switch (questionNum) {
     case 0:
-      answer = "Hello ' + input + ' :-). I'm so excited to make a human friend!";// output response
+      answer = `Hello ${input} :-). I'm so excited to make a human friend!`;// output response
       waitTime = 2000;
       question = 'How old are you, friend?';			    	// load next question
       break
